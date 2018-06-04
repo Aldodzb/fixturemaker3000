@@ -24,7 +24,7 @@ export class AddGruposComponent implements OnInit {
       let numeroEquipos = this.equiposService.totalElements();
       
       // Chequeamos paridad -ADD
-      if (numeroEquipos % 2 == 0){
+      if (numeroEquipos % 2 == 0 && numeroEquipos > 3){
         document.getElementById("generarFixture")['disabled'] = false;
       } else {
         document.getElementById("generarFixture")['disabled'] = true;

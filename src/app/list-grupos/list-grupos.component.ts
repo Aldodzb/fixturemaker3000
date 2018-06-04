@@ -24,7 +24,7 @@ export class ListGruposComponent implements OnInit {
       document.getElementById("agregarGrupoButton")['disabled'] = false;
     } 
     // Chequeamos paridad -DEL
-    if (numeroEquipos == 0){ 
+    if (numeroEquipos < 4){ 
       document.getElementById("generarFixture")['disabled'] = true;
     } else if (numeroEquipos % 2 == 0){
       document.getElementById("generarFixture")['disabled'] = false;
