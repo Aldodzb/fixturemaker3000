@@ -1,0 +1,31 @@
+<div id="content">
+  <label for="exampleInputEmail1">Ingrese el nombre del nuevo grupo</label><br>
+      <div class="form-group has-feedback" >
+          <input type="text" [(ngModel)] = "inputvar" class="form-control input" placeholder="Ingrese el nombre del grupo" style="float: left; border-radius: 6px 0px 0px 6px"/>
+          <img id="banderaSeleccionada" class="estilo-banderas form-control-feedback" style="left:10px; margin-left:260px; margin-top:4px"/>
+      
+       <div class="dropdown" style="float: left">
+          <button class="btn dropdown-toggle btn-das rounded-right" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+           style="border-radius: 0 0">
+            Elegir Bandera
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="text-align: center">  
+            <img (click)="seleccionarBandera('assets/alemania.png')" [src]="'assets/alemania.png'" class="estilo-banderas" />
+            <img (click)="seleccionarBandera('assets/arg.png')" [src]="'assets/arg.png'" class="estilo-banderas ddformat" />
+            <img (click)="seleccionarBandera('assets/brasil.png')" [src]="'assets/brasil.png'" class="estilo-banderas ddformat" /><br>
+            <img (click)="seleccionarBandera('assets/uruguay.png')" [src]="'assets/uruguay.png'" class="estilo-banderas ddformat" />
+            <img (click)="seleccionarBandera('assets/camerun.png')" [src]="'assets/camerun.png'" class="estilo-banderas ddformat" />
+            <img (click)="seleccionarBandera('assets/china.png')" [src]="'assets/china.png'" class="estilo-banderas ddformat" /><br>
+            <img (click)="seleccionarBandera('assets/espania.png')" [src]="'assets/espania.png'" class="estilo-banderas ddformat" />
+            <img (click)="seleccionarBandera('assets/russia.png')"  [src]="'assets/russia.png'" class="estilo-banderas ddformat" />
+            <img (click)="seleccionarBandera('assets/nigeria.png')" [src]="'assets/nigeria.png'" class="estilo-banderas ddformat" />
+
+          </div>
+      </div>
+    </div>
+    <br>
+    <button class="btn btn-primary" id="agregarGrupoButton" (click)="includeNewTeam()" disabled="disabled">Agregar Grupo</button>
+    
+
+</div>
+

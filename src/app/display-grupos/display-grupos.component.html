@@ -1,0 +1,13 @@
+<div id="content">
+  
+  <button class="btn btn-primary" disabled="true" id="generarFixture" (click) = "generate()"> Generar Fixture </button>
+
+  <div *ngIf="flag">
+    <div id="pairings">
+      <div *ngFor="let movs of this.seqTest; let idx = index">
+        <app-pair [Fecha]="idx+1" [Equipos]="movs"></app-pair>
+      </div>
+    </div>
+  </div>
+
+</div>

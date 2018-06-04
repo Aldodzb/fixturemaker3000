@@ -1,0 +1,40 @@
+<div id="content">
+  <!-- Table <<iteración anterior - lo dejo para mostrar el proceso>> --> 
+  <!--<table class="table" style="display:none">
+    <thead>
+      <th class="col-sm-1">#</th>
+      <th class="col-2">Equipos</th>
+      <th class="col-sm-1">Opciones</th>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let movs of equipos">
+          <td >
+            {{movs.id}}
+          </td>
+          <td >
+            {{movs.nombre}}
+          </td>
+          <td>
+            <span class="glyphicon glyphicon-remove" aria-hidden="true" (click)="removeElement(movs.id)"></span>
+          </td>
+        </tr>
+        style="border-radius: 6px;  width: 150px;  background-repeat: no-repeat; background-position: center center; background-size: cover; height:40px; position:relative; float : left; margin-left : 10px; margin-top : 10px; overflow: hidden;"
+    </tbody>
+  </table>-->
+  <div *ngFor="let movs of equipos" id="equiposContent">
+    <!--background-color: rgb(15, 112, 36);-->
+    <div [ngStyle]="{'background-image': 'url(../assets/' + movs.urlBandera + ')'}"   class="equipoDisplay" (mouseenter)="showCross($event)" (mouseleave)="hideCross($event)"> 
+      
+      <div style="margin: 0; color:white;
+      position: absolute;
+      top: 27%;
+      left: 20%;
+      width:60%;
+      vertical-align: middle; overflow: hidden;
+      text-align: center;
+      vertical-align: middle;"><b>{{movs.nombre}}</b></div>
+     <div class="close" style="display: none;text-align:right;margin-right:4%; margin-top:0.5%; float: right;" (click) = "removeElement(movs.id)"><span class="glyphicon glyphicon-remove" style="font-size: 14px"></span></div>
+    </div>  
+  </div>
+</div>

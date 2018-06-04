@@ -1,0 +1,17 @@
+<div id="container">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Fecha {{Fecha}}</h3>
+    </div>
+    <div class="panel-body" *ngIf="equiposService.totalElements() % 2 == 0 && equiposService.totalElements() == this.Equipos.length">
+        <div class="equiposDisplay">
+          <div *ngFor="let pos of this.Equipos; let idx = index; let even = even">
+            <div *ngIf="even" style="text-align: center">
+                {{this.equiposService.getEquipoByPosition(this.Equipos[idx]-1).nombre}} - vs - {{this.equiposService.getEquipoByPosition(this.Equipos[idx+1]-1).nombre}}
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,26 @@
+.input {
+    width   : 300px;
+    display : inline-block;
+}
+
+#agregarGrupoButton {
+    margin: 10px 10px 10px 0;
+    
+}
+
+#content {
+    margin-left  :20%;
+    margin-right :20%;
+}
+
+.estilo-banderas{
+    width  :25px;
+    height :25px;
+}
+
+.ddformat {
+    padding: 2px;
+}
+
+
+
